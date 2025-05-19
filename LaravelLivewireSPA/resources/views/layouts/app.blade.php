@@ -23,7 +23,7 @@
                 <!-- end flash message -->
 
                 <!-- component -->
-                @yield('content’)
+                @yield('content')
                 <!-- end component -->
 
             </div>
