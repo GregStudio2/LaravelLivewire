@@ -46,7 +46,7 @@ Data Posts - Belajar Livewire 3 di SantriKoding.com
                             @endforelse
                         </tbody>
                     </table>
-                    {{ $posts->links('vendor.pagination.bootstrap-5') }}
+                    {{ $posts->links('vendor.pagination.bootstrap-4') }}
                 </div>
             </div>
         </div>
