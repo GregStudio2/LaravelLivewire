@@ -35,8 +35,8 @@ class Create extends Component
     {
         $this->validate();
 
-        //store image in storage/app/public/posts
-        $this->image->storeAs('public/posts', $this->image->hashName());
+        //store image in storage/app/public/post
+        $this->image->storeAs('public/post', $this->image->hashName());
 
         //create post
         Post::create([
@@ -49,7 +49,7 @@ class Create extends Component
         session()->flash('message', 'Data Berhasil Disimpan.');
 
         //redirect
-        return redirect()->route('posts.index');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -59,6 +59,6 @@ class Create extends Component
      */
     public function render()
     {
-        return view('livewire.posts.create');
+        return view('livewire.post.create');
     }
 }
