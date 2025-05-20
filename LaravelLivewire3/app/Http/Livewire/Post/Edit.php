@@ -50,8 +50,8 @@ class Edit extends Component
         //check if image
         if ($this->image) {
 
-            //store image in storage/app/public/posts
-            $this->image->storeAs('public/posts', $this->image->hashName());
+            //store image in storage/app/public/post
+            $this->image->storeAs('public/post', $this->image->hashName());
 
             //update post
             $post->update([
@@ -72,7 +72,7 @@ class Edit extends Component
         session()->flash('message', 'Data Berhasil Diupdate.');
 
         //redirect
-        return redirect()->route('posts.index');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -82,6 +82,6 @@ class Edit extends Component
      */
     public function render()
     {
-        return view('livewire.posts.edit');
+        return view('livewire.post.edit');
     }
 }
