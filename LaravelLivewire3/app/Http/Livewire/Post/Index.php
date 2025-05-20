@@ -25,12 +25,12 @@ class Index extends Component
         session()->flash('message', 'Data Berhasil Dihapus.');
 
         //redirect
-        return redirect()->route('posts.index');
+        return redirect()->route('post.index');
     }
 
     public function render()
     {
-        return view('livewire.posts.index', [
+        return view('livewire.post.index', [
             'posts' => Post::latest()->paginate(5)
         ]);
     }

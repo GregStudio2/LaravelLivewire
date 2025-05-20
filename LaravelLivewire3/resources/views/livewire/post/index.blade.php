@@ -30,7 +30,7 @@ Data Posts - Belajar Livewire 3 di SantriKoding.com
                             @forelse ($posts as $post)
                             <tr>
                                 <td class="text-center">
-                                    <img src="{{ asset('/storage/posts/'.$post->image) }}" class="rounded" style="width: 150px">
+                                    <img src="{{ asset('/storage/post/'.$post->image) }}" class="rounded" style="width: 150px">
                                 </td>
                                 <td>{{ $post->title }}</td>
                                 <td>{!! $post->content !!}</td>
